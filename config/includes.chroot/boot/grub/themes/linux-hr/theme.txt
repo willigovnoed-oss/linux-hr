@@ -1,0 +1,38 @@
+# Linux HR GRUB theme -- black background, green terminal aesthetic
+desktop-image: "background.png"
+desktop-color: "#000000"
+title-text: ""
+title-font: "DejaVu Sans Bold 16"
+title-color: "#00ff41"
+
+message-font: "DejaVu Sans Mono 12"
+message-color: "#00ff41"
+message-bg-color: "#000000"
+
+terminal-box: "terminal_box_*.png"
+terminal-font: "DejaVu Sans Mono 14"
+
++ boot_menu {
+    left = 15%
+    top = 30%
+    width = 70%
+    height = 45%
+    item_font = "DejaVu Sans Mono 14"
+    item_color = "#00ff41"
+    selected_item_color = "#000000"
+    selected_item_pixmap_style = "select_*.png"
+    item_height = 28
+    item_spacing = 4
+    icon_width = 0
+    icon_height = 0
+}
+
++ label {
+    top = 85%
+    left = 0
+    width = 100%
+    align = "center"
+    color = "#00aa2f"
+    font = "DejaVu Sans Mono 10"
+    text = "Linux HR -- root access is a privilege, not a right"
+}

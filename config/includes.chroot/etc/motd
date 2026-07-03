@@ -1,0 +1,9 @@
+Linux HR -- build 1.0 "Nullbyte"
+
+  quick start:
+    neofetch      show system info
+    matrix        watch the rain (needs cmatrix)
+    tmux          start a multiplexed session
+    nmap -h       network recon
+
+  docs & source: https://github.com/YOUR_GITHUB_USER/linux-hr

@@ -1,0 +1,8 @@
+# live-build artifacts
+binary/
+cache/
+chroot/
+.build/
+*.iso
+*.log
+*.deb

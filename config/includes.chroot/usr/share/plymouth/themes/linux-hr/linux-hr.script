@@ -1,0 +1,20 @@
+// Linux HR plymouth boot theme
+// Black background, green monospace status text, simple progress bar.
+
+Window.SetBackgroundTopColor(0, 0, 0);
+Window.SetBackgroundBottomColor(0, 0, 0);
+
+message_sprite = Sprite();
+message_sprite.SetPosition(Window.GetWidth() / 2 - 140, Window.GetHeight() / 2 - 10, 10000);
+
+fun refresh_callback() {
+    message_image = Image.Text("LINUX HR — booting...", 0, 1, 0.25, 1, "Mono 14");
+    message_sprite.SetImage(message_image);
+}
+
+Plymouth.SetRefreshFunction(refresh_callback);
+
+fun display_normal_callback() {
+    // idle
+}
+Plymouth.SetDisplayNormalFunction(display_normal_callback);

@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Linux HR
+Description=Hacker-green boot theme for Linux HR
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/linux-hr
+ScriptFile=/usr/share/plymouth/themes/linux-hr/linux-hr.script
