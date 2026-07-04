@@ -1,0 +1,26 @@
+#!/bin/sh
+# Linux HR dashboard -- ascii logo + quote + quick system snapshot
+GREEN='\033[0;32m'
+DIM='\033[2;32m'
+RESET='\033[0m'
+
+if [ -r /usr/share/linux-hr/logo.txt ]; then
+  printf "%b" "$GREEN"
+  cat /usr/share/linux-hr/logo.txt
+  printf "%b" "$RESET"
+fi
+
+echo
+printf "%b" "$DIM"
+hr-quote
+printf "%b\n" "$RESET"
+
+if command -v neofetch >/dev/null 2>&1; then
+  neofetch --off
+else
+  echo "host: $(hostname)   kernel: $(uname -r)   uptime: $(uptime -p 2>/dev/null)"
+fi
+
+echo
+echo "  neofetch   system info        matrix   cmatrix rain"
+echo "  hr-quote   random hacker tip  nmap -h  network recon"

@@ -4,9 +4,9 @@
 ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗    ██╗  ██╗██████╗ 
 ██║     ██║████╗  ██║██║   ██║╚██╗██╔╝    ██║  ██║██╔══██╗
 ██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝     ███████║██████╔╝
-██║     ██║██║╚██╗██║██║   ██║ ██╔██╗    ██╔══██║██╔══██╗
-███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗   ██║  ██║██║  ██║
-╚═══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝
+██║     ██║██║╚██╗██║██║   ██║ ██╔██╗     ██╔══██║██╔══██╗
+███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗    ██║  ██║██║  ██║
+╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝
 ```
 
 A minimal, hacker-styled Linux distribution built on Debian, with a green
@@ -24,21 +24,38 @@ tradeoff for something you can actually build and boot.
 
 ## Features
 
-- Green-on-black GRUB boot theme
-- Custom Plymouth boot splash
+- Green-on-black GRUB boot theme with a real rendered background (not just colors)
+- Plymouth boot splash with the Linux HR logo and a live progress bar
 - Pre-login TTY banner (`/etc/issue`) with ASCII logo
-- zsh with a Kali-style two-line hacker prompt
+- zsh with a Kali-style two-line hacker prompt, `zsh-autosuggestions` +
+  `zsh-syntax-highlighting`, and fzf history search wired in
+- `hr` — a login dashboard command (logo + random tip + quick system info)
+- `hr-quote` — random hacker one-liner from a custom quote bank
+- Custom green-themed `tmux.conf` (vi keys, mouse mode, status bar) and
+  `.vimrc` (no plugins needed)
+- neofetch config tuned to a green accent palette
 - Curated CLI toolset: `nmap`, `tmux`, `htop`, `neofetch`, `cmatrix`,
-  `figlet`, `lolcat`, Python 3, and the usual build essentials
+  `figlet`, `lolcat`, `ripgrep`, `bat`, `exa`, `fzf`, `ranger`, `ncdu`,
+  `tree`, `lynis`, `tldr`, `cowsay`, Python 3, and the usual build essentials
 - Custom `/etc/os-release` identity (`NAME="Linux HR"`, codename *Nullbyte*)
+- GitHub Actions workflow that builds the ISO and attaches it to a release
 
 ## Build it
+
+### Option A — GitHub Actions (no local setup)
+
+Push a tag like `v1.0` (or trigger the *Build Linux HR ISO* workflow
+manually from the Actions tab). The workflow builds the ISO on a hosted
+Ubuntu runner and attaches it to a GitHub Release. This can take
+20–60+ minutes.
+
+### Option B — locally
 
 Requires a Debian/Ubuntu machine (or VM) with root access and a few GB of
 free disk space.
 
 ```bash
-git clone https://github.com/willigovnoed-oss/linux-hr.git
+git clone https://github.com/YOUR_GITHUB_USER/linux-hr.git
 cd linux-hr
 sudo ./build.sh
 ```

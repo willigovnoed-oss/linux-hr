@@ -1,21 +1,47 @@
+# shell & multiplexer
 zsh
 tmux
+zsh-autosuggestions
+zsh-syntax-highlighting
+
+# editors
 vim
+neovim
+
+# core cli
 git
 curl
 wget
 htop
+tree
+ncdu
+ranger
+fzf
+ripgrep
+bat
+exa
+cowsay
+tldr
+
+# system / network
 net-tools
 iproute2
 neofetch
+openssh-client
+lynis
+nmap
+
+# fun / branding
 figlet
 lolcat
 cmatrix
-nmap
+
+# dev basics
 python3
 python3-pip
-openssh-client
 build-essential
+
+# system essentials
 man-db
 locales
 sudo

@@ -1,0 +1,14 @@
+root access is a privilege, not a right.
+the only system that's fully secure is unplugged.
+there is no patch for a curious mind.
+uptime is a lie the kernel tells the user.
+every port you don't need is a port you should close.
+the best exploit is the one nobody has to use.
+read the logs before you read the docs.
+a clean shell history is a suspicious shell history.
+automate the boring parts, audit the important ones.
+grep first, panic later.
+backups are a love letter to your future self.
+the compiler is always right, eventually.
+if it's not in version control, it doesn't exist.
+trust, but tcpdump.

@@ -1,0 +1,5 @@
+#!/bin/sh
+# print one random line from the Linux HR quote file
+f=/usr/share/linux-hr/quotes.txt
+[ -r "$f" ] || exit 0
+shuf -n 1 "$f" 2>/dev/null || awk 'BEGIN{srand()} {a[NR]=$0} END{print a[int(rand()*NR)+1]}' "$f"
